@@ -1,7 +1,7 @@
 export const ResultScreen = () => {
   return (
-    <div>
+    <section>
       Result screen
-    </div>
+    </section>
   )
 }

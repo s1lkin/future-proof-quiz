@@ -1,7 +1,9 @@
+import styles from './QuizScreen.module.css'
+
 export const QuizScreen = () => {
   return (
-    <div>
+    <section className={styles.quizScreenWrapper}>
       Quiz screen
-    </div>
+    </section>
   )
 }

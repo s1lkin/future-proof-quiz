@@ -1,24 +1,24 @@
 import styles from './App.module.css'
 import { useState } from 'react'
 import { Header } from './components/Header/Header.tsx'
-import { HomeScreen } from './components/HomeScreen/HomeScreen.tsx'
+import { HeroScreen } from './components/HeroScreen/HeroScreen.tsx'
 import { QuizScreen } from './components/QuizScreen/QuizScreen.tsx'
 import { ResultScreen } from './components/ResultScreen/ResultScreen.tsx'
 
-type QuizState = 'home' | 'quiz' | 'result'
+type QuizState = 'hero' | 'quiz' | 'result'
 
 function App() {
-  const [quizState, setQuizState] = useState<QuizState>('home')
+  const [quizState, setQuizState] = useState<QuizState>('hero')
 
   console.log(setQuizState)
   return (
     <div className={styles.app}>
       <Header/>
-      <>
-        {quizState === 'home' && <HomeScreen/>}
+      <main>
+        {quizState === 'hero' && <HeroScreen/>}
         {quizState === 'quiz' && <QuizScreen/>}
         {quizState === 'result' && <ResultScreen/>}
-      </>
+      </main>
     </div>
   )
 }
