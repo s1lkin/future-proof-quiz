@@ -1,8 +1,4 @@
-interface Question {
-  question: string;
-  answers: string[];
-  indexOfCorrectAnswer: number;
-}
+import type { Question } from '../types/sharedTypes.ts'
 
 export const QUESTIONS: Question[] = [
   {

@@ -1,8 +1,19 @@
+import type { QuizState } from '../../types/sharedTypes.ts'
 import { Button } from '../Button/Button.tsx'
 import { Card } from '../Card/Card.tsx'
 import styles from './HeroScreen.module.css'
 
-export const HeroScreen = () => {
+interface HeroScreenProps {
+  setQuizState: (state: QuizState) => void;
+}
+
+export const HeroScreen = (props: HeroScreenProps) => {
+  const { setQuizState } = props
+
+  const handleQuizStart = () => {
+    setQuizState('quiz')
+  }
+
   return (
     <section>
       <Card className={styles.heroCard}>
@@ -10,7 +21,12 @@ export const HeroScreen = () => {
         <p className={styles.heroText}>
           Enjoy peace of mind with protection that runs quietly in the background, and take the quiz
         </p>
-        <Button>Start quiz</Button>
+        <Button
+          variant="primary"
+          onClick={handleQuizStart}
+        >
+          Start quiz
+        </Button>
       </Card>
     </section>
   )

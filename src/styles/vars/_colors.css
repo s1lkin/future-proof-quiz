@@ -4,6 +4,12 @@
   --clr-grey-100: #F7FBFF;
   --clr-grey-200: #DCE2F2;
   --clr-grey-800: #1A1F36;
+
 /*blue*/
   --clr-blue-100: #3857FF;
+
+/*red*/
+  --clr-red-100: #ffa2a2;
+/*green*/
+  --clr-green-100: #7bf1a8;
 }

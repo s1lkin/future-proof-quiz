@@ -2,7 +2,7 @@
   --font-family: 'Poppins', sans-serif;
 
   --fw-regular: 400;
-  --fw-bold: 700;
+  --fw-bold: 600;
 
 /*heading*/
   --fs-heading-32: 32px;
@@ -11,7 +11,7 @@
 
   --fs-heading-26: 26px;
   --lh-heading-26: 34px;
-  --font-heading-28: var(--fw-bold) var(--fs-heading-26) / var(--lh-heading-26) var(--font-family);
+  --font-heading-26: var(--fw-bold) var(--fs-heading-26) / var(--lh-heading-26) var(--font-family);
 
 /*body*/
   --fs-body-14: 14px;

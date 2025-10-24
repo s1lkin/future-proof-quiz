@@ -1,0 +1,41 @@
+.quizCard {
+  width: 100%;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.quizQuestion {
+  font: var(--font-heading-26);
+  margin-bottom: 16px;
+}
+
+.quizAnswersContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.quizAnswer {
+  background: var(--clr-grey-100);
+}
+
+.quizAnswerCorrect {
+  background: var(--clr-green-100);
+  border-color: var(--clr-green-100);
+  pointer-events: none;
+
+  &:hover {
+    border-color: var(--clr-green-100);
+  }
+}
+
+.quizAnswerIncorrect {
+  background: var(--clr-red-100);
+  border-color: var(--clr-red-100);
+  pointer-events: none;
+
+  &:hover {
+    border-color: var(--clr-red-100);
+  }
+
+}

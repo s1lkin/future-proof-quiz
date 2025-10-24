@@ -8,10 +8,6 @@
   font: var(--font-label-12-r);
   text-transform: uppercase;
   border: none;
-  background: var(--clr-blue-100);
-  color: var(--clr-grey-0);
-  padding: 0 32px;
-  height: 40px;
   transition: color 0.25s
   ease-in-out, border-color 0.25s
   ease-in-out, background-color 0.25s
@@ -19,10 +15,32 @@
   ease-in-out;
 }
 
-.button:hover {
-  box-shadow: 0px 1.72px 6.27px 0px #1161FF
+.primaryButton {
+  background: var(--clr-blue-100);
+  color: var(--clr-grey-0);
+  padding: 0 32px;
+  height: 40px;
+
+  &:hover {
+    box-shadow: 0px 1.72px 6.27px 0px #1161FF
+  }
+
+  &:active {
+    transform: scale(0.99);
+  }
 }
 
-.button:active {
-  transform: scale(0.99);
+.quizButton {
+  background: transparent;
+  color: var(--clr-grey-800);
+  border: 1px solid var(--clr-grey-800);
+  height: 40px;
+
+  &:hover {
+    border-color: var(--clr-blue-100);
+  }
+
+  &:active {
+    transform: scale(0.99);
+  }
 }
