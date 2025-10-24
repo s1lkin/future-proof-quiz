@@ -1,0 +1,25 @@
+:root {
+  --font-family: 'DM Sans', sans-serif;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+/*heading*/
+  --fs-heading-32: 32px;
+  --lh-heading-32: 42px;
+  --font-heading-32: var(--fw-regular) var(--fs-heading-32) / var(--lh-heading-32) var(--font-family);
+
+  --fs-heading-26: 26px;
+  --lh-heading-26: 34px;
+  --font-heading-28: var(--fw-bold) var(--fs-heading-26) / var(--lh-heading-26) var(--font-family);
+
+/*body*/
+  --fs-body-14: 14px;
+  --lh-body-14: 18px;
+  --font-body-14-r: var(--fw-regular) var(--fs-body-14) / var(--lh-body-14) var(--font-family);
+
+/*labels*/
+  --fs-label-12: 12px;
+  --lh-label-12: 18px;
+  --font-label-12-r: var(--fw-bold) var(--fs-label-12) / var(--lh-label-12) var(--font-family);
+}
