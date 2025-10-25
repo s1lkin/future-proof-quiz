@@ -1,5 +1,8 @@
 # Futureproof test task
 
+Live version:
+https://future-proof-quiz.vercel.app/
+
 This quiz application includes:
 1. The quiz consists of **2 questions** (one on each screen).
 2. The user sees **only one screen at a time**.
