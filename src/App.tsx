@@ -5,7 +5,7 @@ import { QuizScreen } from './components/QuizScreen/QuizScreen.tsx'
 import { ResultScreen } from './components/ResultScreen/ResultScreen.tsx'
 import { QuestionsData } from './lib/questionsData.ts'
 import { useQuizState } from './lib/useQuizState.ts'
-import { EmailScreen } from './components/EmailScreen/EmailScreen.tsx';
+import { EmailScreen } from './components/EmailScreen/EmailScreen.tsx'
 
 function App() {
   const {

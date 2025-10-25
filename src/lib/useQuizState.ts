@@ -1,6 +1,14 @@
 import { useEffect, useState } from 'react'
 import type { QuizState } from './sharedTypes.ts'
 
+/**
+ * Interface representing the stored state of a quiz application.
+ * @property quizState - Represents the current state of the quiz.
+ * @property selectedAnswer - The index of the answer selected by the user, or null if no selection has been made.
+ * @property currentQuestionIndex - Indicates the index of the question currently being presented to the user.
+ * @property userEmail - The email address of the user associated with the current quiz session, if provided.
+ * @property answers - A collection of the answers recorded for the quiz.
+ */
 interface StoredState {
   quizState: QuizState
   selectedAnswer: number | null
@@ -34,6 +42,7 @@ const getInitialState = (): StoredState => {
 /**
  * A custom hook that manages and persists the state of a quiz application.
  * This hook integrates with local storage to save and restore the quiz state.
+ *
  * Maybe better approach can be useReducer with Context, it helps to avoid props drilling
  * but here I haven't deep props drilling and I choose separate useStates
  */

@@ -1,8 +1,8 @@
-import { Card } from '../Card/Card.tsx';
-import { EmailForm } from '../EmailForm/EmailForm.tsx';
-import { type Dispatch, type SetStateAction } from 'react';
-import type { QuizState } from '../../lib/sharedTypes.ts';
-import styles from './EmailScreen.module.css';
+import { Card } from '../Card/Card.tsx'
+import { EmailForm } from '../EmailForm/EmailForm.tsx'
+import { type Dispatch, type SetStateAction } from 'react'
+import type { QuizState } from '../../lib/sharedTypes.ts'
+import styles from './EmailScreen.module.css'
 
 interface EmailScreenProps {
   userEmail: string | undefined;

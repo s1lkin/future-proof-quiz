@@ -4,6 +4,18 @@ import { Button } from '../Button/Button.tsx'
 import { Card } from '../Card/Card.tsx'
 import styles from './QuizScreen.module.css'
 
+/**
+ * Represents quiz screen component props
+ * @property question - The current question to be displayed, represented by a `Question` object.
+ * @property selectedAnswer - The index of the answer selected by the user, or `null` if no answer is selected.
+ * @property currentQuestionIndex - The index of the current question in the quiz.
+ * @property setCurrentQuestionIndex - A state updater function to set the current question index.
+ * @property setSelectedAnswer - A state updater function to set the selected answer index.
+ * @property numberOfQuestions - The total number of questions in the quiz.
+ * @property setQuizState - A state updater function to set the overall state of the quiz.
+ * @property setAnswers - A state updater function to store the user's submitted answers as an array of strings.
+ * @property handleQuizRestart - A function to restart the quiz, resetting necessary states.
+ */
 interface QuizScreenProps {
   question: Question;
   selectedAnswer: number | null;
@@ -26,13 +38,13 @@ export const QuizScreen = (props: QuizScreenProps) => {
     numberOfQuestions,
     setQuizState,
     setAnswers,
-    handleQuizRestart,
+    handleQuizRestart
   } = props
 
   const getButtonClass = (index: number) => {
-    if (selectedAnswer === null) return styles.quizAnswer;
-    if (index === question.indexOfCorrectAnswer) return styles.quizAnswerCorrect;
-    if (selectedAnswer === index) return styles.quizAnswerIncorrect;
+    if (selectedAnswer === null) return styles.quizAnswer
+    if (index === question.indexOfCorrectAnswer) return styles.quizAnswerCorrect
+    if (selectedAnswer === index) return styles.quizAnswerIncorrect
   }
 
   const handleAnswerSelect = (index: number, answer: string) => {

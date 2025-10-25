@@ -11,4 +11,4 @@ export const QuestionsData: Question[] = [
     answers: ['ASAP', 'Never', 'In two weeks', 'We will try not to forget'],
     indexOfCorrectAnswer: 0
   }
-];
+]

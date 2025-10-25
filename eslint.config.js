@@ -19,5 +19,11 @@ export default defineConfig([
       ecmaVersion: 2020,
       globals: globals.browser,
     },
+    rules: {
+      'no-console': 'warn',
+      'no-unused-vars': 'error',
+      'comma-dangle': 'error',
+      'semi': ["error", "never"]
+    },
   },
 ])

@@ -12,16 +12,16 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
 const variantClasses: Record<ButtonVariants, string> = {
   'primary': styles.primaryButton,
   'quiz': styles.quizButton,
-  'secondary': styles.secondaryButton,
-};
+  'secondary': styles.secondaryButton
+}
 
 export const Button = (props: ButtonProps) => {
   const { children, className, variant, ...otherProps } = props
 
   const classes = [
     className,
-    variantClasses[variant],
-  ].join(' ');
+    variantClasses[variant]
+  ].join(' ')
 
   return (
     <button

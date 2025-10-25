@@ -1,8 +1,8 @@
-import { Card } from '../Card/Card.tsx';
-import styles from './ResultScreen.module.css';
-import type { QuizState } from '../../lib/sharedTypes.ts';
-import type { Dispatch, SetStateAction } from 'react';
-import { Button } from '../Button/Button.tsx';
+import { Card } from '../Card/Card.tsx'
+import styles from './ResultScreen.module.css'
+import type { QuizState } from '../../lib/sharedTypes.ts'
+import type { Dispatch, SetStateAction } from 'react'
+import { Button } from '../Button/Button.tsx'
 
 interface ResultScreenProps {
   userEmail: string | undefined;
