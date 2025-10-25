@@ -18,8 +18,6 @@ h2,
 h3,
 h4,
 p,
-ul[class],
-ol[class],
 li,
 figure,
 figcaption,
@@ -38,13 +36,6 @@ body {
   font-style: normal;
   background: var(--clr-grey-200);
   color: var(--clr-grey-800);
-}
-
-ul[class],
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 input,

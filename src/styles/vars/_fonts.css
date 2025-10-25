@@ -18,6 +18,10 @@
   --lh-body-14: 18px;
   --font-body-14-r: var(--fw-regular) var(--fs-body-14) / var(--lh-body-14) var(--font-family);
 
+  --fs-body-16: 16px;
+  --lh-body-16: 18px;
+  --font-body-16-b: var(--fw-bold) var(--fs-body-16) / var(--lh-body-16) var(--font-family);
+
 /*labels*/
   --fs-label-12: 12px;
   --lh-label-12: 18px;

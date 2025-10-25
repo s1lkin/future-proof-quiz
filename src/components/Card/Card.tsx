@@ -7,7 +7,7 @@ interface CardProps {
 }
 
 export const Card = (props: CardProps) => {
-  const { children, className } = props
+  const { children, className = '' } = props
 
   return (
     <div className={`${styles.cardWrapper} ${className}`}>

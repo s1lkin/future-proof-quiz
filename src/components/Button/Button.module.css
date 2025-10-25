@@ -28,6 +28,17 @@
   &:active {
     transform: scale(0.99);
   }
+
+  &:disabled {
+    background: var(--clr-grey-200);
+    color: var(--clr-grey-250);
+    transform: none;
+    pointer-events: none;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
 }
 
 .secondaryButton {

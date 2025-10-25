@@ -1,16 +1,20 @@
 import { useEffect, useState } from 'react'
-import type { QuizState } from '../types/sharedTypes.ts'
+import type { QuizState } from './sharedTypes.ts'
 
 interface StoredState {
   quizState: QuizState
   selectedAnswer: number | null
-  currentQuestion: number
+  currentQuestionIndex: number
+  userEmail: string | undefined
+  answers: string[]
 }
 
 const INITIAL_STATE: StoredState = {
   quizState: 'hero',
   selectedAnswer: null,
-  currentQuestion: 0,
+  currentQuestionIndex: 0,
+  userEmail: undefined,
+  answers: []
 }
 
 const STORAGE_KEY = 'appState'
@@ -27,17 +31,27 @@ const getInitialState = (): StoredState => {
   return INITIAL_STATE
 }
 
+/**
+ * A custom hook that manages and persists the state of a quiz application.
+ * This hook integrates with local storage to save and restore the quiz state.
+ * Maybe better approach can be useReducer with Context, it helps to avoid props drilling
+ * but here I haven't deep props drilling and I choose separate useStates
+ */
 export const useQuizState = () => {
   const initialState = getInitialState()
   const [quizState, setQuizState] = useState<QuizState>(initialState.quizState)
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(initialState.selectedAnswer)
-  const [currentQuestion, setCurrentQuestion] = useState<number>(initialState.currentQuestion)
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(initialState.currentQuestionIndex)
+  const [userEmail, setUserEmail] = useState<string | undefined>(initialState.userEmail)
+  const [answers, setAnswers] = useState<string[]>(initialState.answers)
 
   useEffect(() => {
     const stateToStore: StoredState = {
       quizState,
       selectedAnswer,
-      currentQuestion,
+      currentQuestionIndex,
+      userEmail,
+      answers
     }
 
     try {
@@ -45,14 +59,18 @@ export const useQuizState = () => {
     } catch (error) {
       console.error('useLocalstorage error while saving quiz state:', error)
     }
-  }, [quizState, selectedAnswer, currentQuestion])
+  }, [quizState, selectedAnswer, currentQuestionIndex, userEmail, answers])
 
   return {
     quizState,
+    userEmail,
+    setUserEmail,
     selectedAnswer,
-    currentQuestion,
+    currentQuestionIndex,
     setQuizState,
     setSelectedAnswer,
-    setCurrentQuestion
+    setCurrentQuestionIndex,
+    answers,
+    setAnswers
   }
 }

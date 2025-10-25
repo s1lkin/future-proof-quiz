@@ -1,5 +1,5 @@
 import type { Dispatch, SetStateAction } from 'react'
-import type { QuizState } from '../../types/sharedTypes.ts'
+import type { QuizState } from '../../lib/sharedTypes.ts'
 import { Button } from '../Button/Button.tsx'
 import { Card } from '../Card/Card.tsx'
 import styles from './HeroScreen.module.css'

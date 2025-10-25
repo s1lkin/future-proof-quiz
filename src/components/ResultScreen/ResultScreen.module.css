@@ -1,0 +1,43 @@
+.resultCard {
+  width: 100%;
+  max-width: 400px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.resultImgContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.resultImg {
+  width: 120px;
+  height: auto;
+  margin-top: -14px;
+}
+
+.resultTitle {
+  font: var(--font-body-16-b);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.resultText {
+  font: var(--font-body-14-r);
+}
+
+.resultTextHighlight {
+  color: var(--clr-blue-100);
+}
+
+.resultAnswers {
+  display: flex;
+  flex-direction: column;
+  margin: 4px 0 20px 20px;
+  padding: 0;
+
+  li {
+    font: var(--font-body-14-r);
+  }
+}
