@@ -7,8 +7,8 @@ export const QUESTIONS: Question[] = [
     indexOfCorrectAnswer: 2
   },
   {
-    question: 'What is the best programming language?',
-    answers: ['JavaScript', 'TypeScript', 'Python', 'C++'],
+    question: 'What is the best?',
+    answers: ['f', 'a', 'b', 'r'],
     indexOfCorrectAnswer: 1
   }
 ];

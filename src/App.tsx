@@ -1,19 +1,20 @@
 import styles from './App.module.css'
-import { useState } from 'react'
 import { Header } from './components/Header/Header.tsx'
 import { HeroScreen } from './components/HeroScreen/HeroScreen.tsx'
 import { QuizScreen } from './components/QuizScreen/QuizScreen.tsx'
 import { ResultScreen } from './components/ResultScreen/ResultScreen.tsx'
 import { QUESTIONS } from './data/questions.ts'
-import type { QuizState } from './types/sharedTypes.ts'
+import { useQuizState } from './lib/useQuizState.ts'
 
 function App() {
-  const [quizState, setQuizState] = useState<QuizState>('hero')
-  const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null)
-
-  const handleAnswerSelect = (index: number) => {
-    setSelectedAnswer(index)
-  }
+  const {
+    quizState,
+    selectedAnswer,
+    setQuizState,
+    currentQuestion,
+    setCurrentQuestion,
+    setSelectedAnswer
+  } = useQuizState()
 
   return (
     <div className={styles.app}>
@@ -22,9 +23,13 @@ function App() {
         {quizState === 'hero' && <HeroScreen setQuizState={setQuizState}/>}
         {quizState === 'quiz' &&
           <QuizScreen
-            question={QUESTIONS[0]}
-            handleAnswerSelect={handleAnswerSelect}
+            question={QUESTIONS[currentQuestion]}
+            numberOfQuestions={QUESTIONS.length}
+            setQuizState={setQuizState}
             selectedAnswer={selectedAnswer}
+            setSelectedAnswer={setSelectedAnswer}
+            currentQuestion={currentQuestion}
+            setCurrentQuestion={setCurrentQuestion}
           />
         }
         {quizState === 'result' && <ResultScreen/>}

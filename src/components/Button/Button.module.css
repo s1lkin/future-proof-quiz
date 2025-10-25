@@ -22,7 +22,22 @@
   height: 40px;
 
   &:hover {
-    box-shadow: 0px 1.72px 6.27px 0px #1161FF
+    box-shadow: 0px 1.72px 6.27px 0px var(--clr-blue-200);
+  }
+
+  &:active {
+    transform: scale(0.99);
+  }
+}
+
+.secondaryButton {
+  background: var(--clr-grey-200);
+  color: var(--clr-grey-800);
+  padding: 0 32px;
+  height: 40px;
+
+  &:hover {
+    box-shadow: 0px 1.72px 6.27px 0px var(--clr-grey-250);
   }
 
   &:active {
@@ -33,7 +48,7 @@
 .quizButton {
   background: transparent;
   color: var(--clr-grey-800);
-  border: 1px solid var(--clr-grey-800);
+  border: 1px solid var(--clr-grey-200);
   height: 40px;
 
   &:hover {

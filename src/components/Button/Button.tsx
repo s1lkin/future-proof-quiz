@@ -1,7 +1,7 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react'
 import styles from './Button.module.css'
 
-type ButtonVariants = 'primary' | 'quiz'
+type ButtonVariants = 'primary' | 'secondary' | 'quiz'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
   children: ReactNode
@@ -11,7 +11,8 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
 
 const variantClasses: Record<ButtonVariants, string> = {
   'primary': styles.primaryButton,
-  'quiz': styles.quizButton
+  'quiz': styles.quizButton,
+  'secondary': styles.secondaryButton,
 };
 
 export const Button = (props: ButtonProps) => {
